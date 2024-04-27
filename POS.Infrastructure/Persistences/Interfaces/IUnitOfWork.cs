@@ -5,6 +5,7 @@
         //declaracion o matricula de nuestra interfaces a nivel de repositoy
 
         ICategoryRepositoy Category {  get; }
+        IUserRepository User { get; }
         void SaveChange();
         Task SaveChangesAsync();
     }

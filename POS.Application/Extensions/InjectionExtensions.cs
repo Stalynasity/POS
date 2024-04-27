@@ -14,16 +14,13 @@ namespace POS.Application.Extensions
         {
             services.AddSingleton(configuration);
 
-            //services.AddFluentValidation(options =>
-            //{
-            //    options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies().Where(p => !p.IsDynamic));
-            //});
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddScoped<ICategoryApplication, CategoryApplication>();
+            services.AddScoped<IUserApplication, UserApplication>();
 
             return services;
         }

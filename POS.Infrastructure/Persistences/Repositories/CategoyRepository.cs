@@ -12,6 +12,8 @@ namespace POS.Infrastructure.Persistences.Repositories
 
         public CategoyRepository(POSContext context) : base(context) { }
 
+
+
         public async Task<BaseEntityResponse<Category>> ListCategory(BaseFiltersRequest filters)
         {
             var response = new BaseEntityResponse<Category>();

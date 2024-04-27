@@ -15,12 +15,12 @@ namespace POS.Infrastructure.Extensions
 
             services.AddDbContext<POSContext>(
                 options => options.UseSqlServer(
-                    configuration.GetConnectionString("POSConection"), 
-                    b => b.MigrationsAssembly(assembly)), 
+                    configuration.GetConnectionString("POSConection"), b => b.MigrationsAssembly(assembly)), 
                 ServiceLifetime.Transient 
                 );
-            //ciclo de vidad de rservido transi
+            //ciclo de vidad de servido transi
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            //ambos son los mismos asi q debe agg el scoped imagino
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             return services;

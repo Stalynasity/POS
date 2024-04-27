@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POS.Application.Dtos.Response
+namespace POS.Application.Dtos.Category.Response
 {
     public class CategoryResponseDto
     {
@@ -13,6 +13,6 @@ namespace POS.Application.Dtos.Response
         public string? Description { get; set; }
         public DateTime AuditCreateDate { get; set; }
         public int State { get; set; }
-        public string? StateCategory {  get; set; }
+        public string? StateCategory { get; set; }
     }
 }
