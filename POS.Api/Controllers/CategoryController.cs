@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using POS.Application.Dtos.Category.Request;
 using POS.Application.Interfaces;
 using POS.Infrastructure.Commons.Bases.Request;
 
 namespace POS.Api.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class CategoryController : ControllerBase

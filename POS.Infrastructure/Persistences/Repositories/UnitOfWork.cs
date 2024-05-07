@@ -9,6 +9,8 @@ namespace POS.Infrastructure.Persistences.Repositories
 
         public IUserRepository User { get; private set;}
 
+        public IProviderRepository Provider { get; private set; }
+
         private readonly POSContext _context;
 
         public UnitOfWork(POSContext context)
@@ -16,6 +18,7 @@ namespace POS.Infrastructure.Persistences.Repositories
             _context = context;
             Category = new CategoyRepository(_context);
             User = new UserRepository(_context);
+            Provider = new ProviderRepository(_context);
         }
 
         public void Dispose()

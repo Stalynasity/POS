@@ -22,7 +22,7 @@ namespace POS.Infrastructure.Persistences.Repositories
             //                  where c.AuditDeleteUser == null && c.AuditDeleteDate == null
             //                  select c).AsNoTracking().AsQueryable();
 
-            var categories = GetEntityQuery(c => c.AuditDeleteUser == null && c.AuditDeleteDate == null);
+            var categories = GetEntityQuery(c => c.AuditDeleteUser == null && c.AuditDeleteDate == null).AsNoTracking();
 
             // como es string se usa !string.IsNullOrEmpty, cuando no sea nulo va a filtrar
             if (filters.NumFilter is not null && !string.IsNullOrEmpty(filters.TextFilter))

@@ -6,6 +6,7 @@
 
         ICategoryRepositoy Category {  get; }
         IUserRepository User { get; }
+        IProviderRepository Provider { get; }
         void SaveChange();
         Task SaveChangesAsync();
     }
